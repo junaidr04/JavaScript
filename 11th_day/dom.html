@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1 id="title">Hello</h1>
+    <input id="nameInput" type="text" placeholder="Enter name">
+    <button id="btn">Update</button>
+
+    <script>
+        const title = document.querySelector("#title")
+        const input = document.querySelector("#nameInput")
+        const btn = document.querySelector("#btn")
+
+        // Button click করলে title update হবে
+        btn.addEventListener("click", () => {
+            const name = input.value
+
+            if (!name) {
+                title.textContent = "Please enter a name!"
+                title.style.color = "red"
+                return
+            }
+
+            title.textContent = `Hello, ${name}!`
+            title.style.color = "green"
+            input.value = "" // input clear
+        })
+    </script>
+</body>
+
+</html>
