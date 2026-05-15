@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JACK SPARROW</h1>
+    <button id="start">Start</button>
+</body>
+<script>
+    const sayJack=function()
+    {
+        console.log("Jack");
+    }
+    const changeText=function()
+    {
+        document.querySelector('h1').innerHTML='Web Developer'
+    }
+    //koto second pore load nibe oita bhujhai
+    const changeMe=setTimeout(changeText, 2000);
+    //eta dile ager name taii show korbe
+    document.querySelector('#start').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED");
+    })
+</script>
+</html>
