@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>API Test</title>
+</head>
+
+<body>
+    <h1>API Test</h1>
+
+    <!-- এই button এ click করলে API call হবে -->
+    <button id="btn">Fetch User</button>
+
+    <!-- API থেকে আসা data এখানে দেখাবে -->
+    <!-- pre tag → text কে format সহ দেখায় -->
+    <pre id="output"></pre>
+
+    <script>
+        // id="btn" element টা select করলাম
+        const btn = document.querySelector("#btn")
+
+        // id="output" element টা select করলাম
+        const output = document.querySelector("#output")
+
+        // btn এ click হলে এই function run হবে
+        // async → ভেতরে await use করবো তাই
+        btn.addEventListener("click", async () => {
+
+            try {
+                // GitHub API তে request পাঠালাম তোর profile এর জন্য
+                // await → response আসা পর্যন্ত wait করো
+                const response = await fetch("https://api.github.com/users/junaidr04")
+
+                // response টা JSON format এ আছে
+                // .json() দিয়ে JavaScript object বানালাম
+                // await → convert হওয়া পর্যন্ত wait করো
+                const data = await response.json()
+
+                // data কে readable format এ দেখাচ্ছি
+                // JSON.stringify(data, null, 2) → 2 space indent দিয়ে সুন্দর করে
+                output.textContent = JSON.stringify(data, null, 2)
+
+            } catch (error) {
+                // কোনো error আসলে এখানে দেখাবে
+                // network problem, API down ইত্যাদি
+                output.textContent = "Error: " + error
+            }
+        })
+    </script>
+</body>
+
+</html>
