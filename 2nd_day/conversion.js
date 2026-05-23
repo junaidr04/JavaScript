@@ -1,3 +1,4 @@
+//typeof and Type Conversion
 let score="53";
 let name="jack";
 console.log(typeof score);
@@ -25,8 +26,8 @@ console.log(x);
 
 //post increment  
 let y=5;
-console.log(y++);
-console.log(y);
+console.log(y++);//5 print hbe agge, tarpor y=6 hbe.
+console.log(y); // 6
 
 //pre increment
 let z=12;
