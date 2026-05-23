@@ -10,13 +10,13 @@ console.log(typeof Name); //object
 
 console.log(Name.toUpperCase()); //string er method use korte parbo, karon Name ekta string object, tai toUpperCase() method use korte parbo.
 
-console.log(Name.charAt(5)); //string er method use korte parbo, karon Name ekta string object, tai charAt() method use korte parbo. charAt() method diye string er kono specific index er character ber korte parbo. ekhane 5 index er character ber korbe, jeta H hobe.
+console.log(Name.charAt(5)); // karon Name ekta string object, tai charAt() method use korte parbo. charAt() method diye string er kono specific index er character ber korte parbo. ekhane 5 index er character ber korbe, jeta H hobe.
 
 console.log(Name.indexOf("H")); //indexOf() method diye string er kono specific character er index ber korte parbo. ekhane "H" character er index ber korbe, jeta 7 hobe.
 
 const newString = Name.substring(0, 5); //substring() method diye string er kono specific part ber korte parbo. ekhane 0 index theke 5 index porjonto part ber korbe, jeta "Alice" hobe.
 console.log(newString);
-
+ 
 const newString2 = Name.slice(-10, 5);
 console.log(newString2); //slice() method diye string er kono specific part ber korte parbo. ekhane -10 index theke 5 index porjonto part ber korbe, jeta "Alice" hobe. slice() method e negative index use korte parbo, jeta string er end theke count kore. ekhane -10 index mane string er end theke 10 index porjonto part ber korbe, jeta "Alice" hobe.
 
