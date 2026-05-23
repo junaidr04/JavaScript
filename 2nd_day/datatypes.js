@@ -22,13 +22,17 @@ console.log(age<18);
 
 //object
 
-let name = "Junaid";
-let semester = 5;
-let department = "CSE";
-let isLoggedIn = true;
+//Object এ হলো ১টাই variable, ভেতরে সব...
+let student = {
+    name: "Junaid",
+    semester: 5,
+    department: "CSE",
+    isLoggedIn: true
+};
+
 console.log(
-    "Name: " + name + "\n" +
-    "Semester: " + semester + "\n" +
-    "Department: " + department + "\n" +
-    "Is Logged In: " + isLoggedIn
+    "Name: " + student.name + "\n" +
+    "Semester: " + student.semester + "\n" +
+    "Department: " + student.department + "\n" +
+    "Is Logged In: " + student.isLoggedIn
 );
