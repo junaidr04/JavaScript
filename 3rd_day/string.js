@@ -26,6 +26,7 @@ console.log(url.replace("youtube", "vimeo")); //replace() method diye string er 
 console.log(url.includes("youtube")); //includes() method diye string er kono specific part ache kina check korte parbo. ekhane "youtube" ache kina check korbe, jeta true hobe.
 
 console.log(Name.split("")); //split() method diye string ke array te convert korte parbo. ekhane Name string ke "" diye split korbe, jeta ["A","l","i","c","e","F","A","H","H"] hobe.
+console.log(Name.split(" ")); // " " erokom thkle protita word alda kore.. alphabet naa... exp= ["Google","Zurich","2027"]
 
 const cardNumber = "9876";
 console.log(cardNumber.padStart(16, "*")); //padStart() method diye string er shuru te kono specific character add korte parbo. ekhane cardNumber string er shuru te "*" add korbe, jeta "************9876" hobe.
